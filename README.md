@@ -7,7 +7,7 @@ This repository contains the Phone Directory Application, which allows users to 
     - [1.1 Physical Setup of Raspberry Pi](#11-physical-setup-of-raspberry-pi)
     - [1.2 Installing Raspberry Pi Imager](#12-installing-raspberry-pi-imager)
     - [1.3 Installing Ubuntu on the SD Card](#13-installing-ubuntu-on-the-sd-card)
-    - [1.4 Setting up the OS (Linux) on Raspberry Pi](#14-setting-up-the-os-linux-on-raspberry-pi)
+    - [1.4 Setting up the OS (Ubuntu) on Raspberry Pi](#14-setting-up-the-os-linux-on-raspberry-pi)
     - [1.5 Command Line Setup](#15-command-line-setup)
 
 
