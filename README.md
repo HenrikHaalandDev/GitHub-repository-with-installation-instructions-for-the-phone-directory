@@ -10,6 +10,8 @@ This repository contains the Phone Directory Application, which allows users to 
     - [1.4 Setting up the OS (Ubuntu) on Raspberry Pi](#14-setting-up-the-os-linux-on-raspberry-pi)
     - [1.5 Command Line Setup](#15-command-line-setup)
     - [1.6 Creating a Database User in MariaDB](#16-creating-a-database-user-in-mariadb)
+    - [1.7 Controlling the Raspberry Pi via SSH](#17-controlling-the-raspberry-pi-via-ssh)
+
 
 ---
 
@@ -86,7 +88,11 @@ FLUSH PRIVILEGES;
 ```
 
 
-
+### 1.7 Controlling the Raspberry Pi via SSH
+1. Find the Rasberry Pi's IP adress:
+```bash
+ip a
+```
 
 
 
