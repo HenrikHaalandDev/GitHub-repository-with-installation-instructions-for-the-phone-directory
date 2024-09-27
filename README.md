@@ -9,7 +9,7 @@ This repository contains the Phone Directory Application, which allows users to 
     - [1.3 Installing Ubuntu on the SD Card](#13-installing-ubuntu-on-the-sd-card)
     - [1.4 Setting up the OS (Ubuntu) on Raspberry Pi](#14-setting-up-the-os-linux-on-raspberry-pi)
     - [1.5 Command Line Setup](#15-command-line-setup)
-
+    - [1.6 Creating a Database User in MariaDB](#16-creating-a-database-user-in-mariadb)
 
 ---
 
@@ -69,3 +69,25 @@ sudo systemctl start ssh
 ```bash
 sudo apt install python3-pip git mariadb-server
 ```
+
+### 1.6 Creating a Database User in MariaDB
+1. Log in to MariaDB as root:
+```bash
+sudo mariadb -u root
+```
+2. Create a new user (replace `username` and `password`):
+```sql
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+```
+3. Grant the new user all privileges:
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+```
+
+
+
+
+
+
+
