@@ -11,7 +11,9 @@ This repository contains the Phone Directory Application, which allows users to 
     - [1.5 Command Line Setup](#15-command-line-setup)
     - [1.6 Creating a Database User in MariaDB](#16-creating-a-database-user-in-mariadb)
     - [1.7 Controlling the Raspberry Pi via SSH](#17-controlling-the-raspberry-pi-via-ssh)
-
+2. [Setting up the Database](#2-setting-up-the-database)
+    - [2.1 Creating the Database Tables](#21-creating-the-database-tables)
+    - []
 
 ---
 
@@ -69,7 +71,10 @@ sudo systemctl start ssh
 
 #### Install Git, Python, and MariaDB:
 ```bash
-sudo apt install python3-pip git mariadb-server
+sudo apt install python3-pip
+sudo apt install git
+sudo apt install mariadb-server
+sudo mysql_secure_installation
 ```
 
 ### 1.6 Creating a Database User in MariaDB
@@ -93,7 +98,28 @@ FLUSH PRIVILEGES;
 ```bash
 ip a
 ```
+- Look for the line containing `inet`, e.g., `192.168.x.x`.
 
+2. From your PC, use SSH to connect:
+```bash
+ssh username@192.168.x.x
+```
+- Replace `username` with your Raspberry Pi username and `192.168.x.x` with its IP address.
 
+## 2. Setting up the Database
+
+### 2.1 Creating the Database Tables
+1. Log in to MariaDB from your Raspberry Pi or PC:
+   ```bash
+   sudo mariadb -u username -p
+   ```
+
+2. Create the `phone_directory` database and the required tables:
+```sql
+CREATE DATABASE phone_directory;
+
+USE phone_directory;
+
+CREATE TABLE 
 
 
